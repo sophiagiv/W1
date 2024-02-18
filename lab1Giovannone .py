@@ -67,6 +67,7 @@ class Cat(Pet):
         
 
     def mood(self):
+        # -3, missing a few requirements here.
         if self.food >= self.food_warning and (0 < self.boredom < 2):
             print("Happy")
         elif self.boredom >=2:
@@ -77,13 +78,14 @@ class Cat(Pet):
  # The two edits that I made were two variables name get_treat and get_reward as integars 
  # for my pet turtle that will either deserves a treat or needs to be a better pet
  # from the overall class Pet and two from the class that i made  
+# cute!
 
 class turtle(Pet):
     get_treat = 0 
     get_reward = 4 
    
     def treat(self):
-        if self.cleanliness_max == 8:
+        if self.cleanliness_max == 8: 
             print(f"{self.name}  deserves a treat ")
         
         elif self.get_treat >= self.get_reward:
@@ -91,7 +93,7 @@ class turtle(Pet):
         else:
             self.get_treat += 1
             self.cleanliness_max -= 1 
-            print(f" needs to be a better pet ")
+            print(f"{self.name}  needs to be a better pet ")
     
     def type_treat(self):
         if self.get_treat == 2:
