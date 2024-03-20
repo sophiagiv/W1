@@ -37,10 +37,12 @@ def percent_sign():
             label.config(text = result)
         except Exception:
             label.config(text= "Error; ")
-        else:
+        else: #remove one tab before else, to align it with the above if. Current function will return an error. -2 points
             label.config(text="error; no num ")
 button_percent = Button(root, text='%', command=percent_sign, padx=10, pady=10, background='linen', fg='chocolate')
 button_percent.grid(row=6, column=0)
+
+# missing a negate symbol, to allow a shortcut for any negation operation. -8 points.
 
 #clear 
 def clear_button():
