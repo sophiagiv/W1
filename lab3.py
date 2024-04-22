@@ -50,7 +50,7 @@ cursor.execute(members)
 print("Tables created successfully")
 
 
-#Add book function 
+#Add book function # -10pts, to avoid any errors, try to implement a try-except block to output any errors.
 def addBook(connection, Bname, Auth, Price, Publ, Date_of_Purchase):
     
     cursor = connection.cursor()
