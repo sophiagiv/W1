@@ -11,6 +11,8 @@ library = mysql.connector.connect(user = 'root',
                                     password = 'sophie123',
                                     database = 'Library')
 
+# Missing the statements that update the library database; -5pts
+
 login_manager = flask_login.LoginManager()
    
 class User(flask_login.UserMixin): 
