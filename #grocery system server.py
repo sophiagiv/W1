@@ -1,3 +1,5 @@
+# This submission missed two required elements: a README file explaining the app's functionalities; a database file that separates the database models from the server views. -15pts
+
 #grocery system server
 from flask import Flask, request, session, redirect, url_for, render_template, flash
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -5,6 +7,8 @@ import mysql.connector
 
 app = Flask(__name__)
 app.secret_key = 'super secret key' 
+
+# missing the declaration of session object that keeps track of the user status and is constantly used in followings. -5pts
 
 def connect_db():
     return mysql.connector.connect(
@@ -41,6 +45,7 @@ def logout():
     return redirect(url_for('index'))
 
 @app.route('/protected')
+#missing @flask_login.login_required, which protected this route to be available for authenticated user only; -5pts
 def protected():
     if 'user_id' not in session:
         return redirect(url_for('login'))
