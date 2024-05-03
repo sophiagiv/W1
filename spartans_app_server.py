@@ -3,9 +3,12 @@ from flask_login import LoginManager, UserMixin, login_user, logout_user, login_
 import mysql.connector
 from werkzeug.security import check_password_hash, generate_password_hash
 
+# For app modularization purpose, expect at least a main and a blueprint modules. -5pts
+
 app = Flask(__name__)
 app.secret_key = "super secret string"
 
+# Database creation and password datatype setting is missing; -5pts
 students = mysql.connector.connect(
     user='root',
     password='sophie123',
