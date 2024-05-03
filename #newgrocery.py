@@ -1,3 +1,7 @@
+# This GUI doesn't manage the database by talking to the server; 
+# the respective url calls are missing under login(), insert_record() and add_product() functions. -10pts
+
+
 #final grocery store system main 
 import mysql.connector
 from mysql.connector import Error
